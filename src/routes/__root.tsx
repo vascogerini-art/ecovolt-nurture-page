@@ -77,19 +77,29 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "ecovoltaica — Fotovoltaico in Frosinone, Latina e basso Lazio" },
+      {
+        name: "description",
+        content:
+          "Installiamo impianti fotovoltaici residenziali a Frosinone, Latina e nel basso Lazio. Specialisti delle coperture da due generazioni: niente infiltrazioni, niente sorprese.",
+      },
+      { name: "author", content: "ecovoltaica" },
+      { property: "og:title", content: "ecovoltaica — Fotovoltaico in Frosinone, Latina e basso Lazio" },
+      {
+        property: "og:description",
+        content:
+          "Impianti fotovoltaici residenziali nel basso Lazio. Chi ti fa il preventivo è chi realizza l'impianto.",
+      },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
+      { rel: "stylesheet", href: appCss },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: appCss,
+        href: "https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap",
       },
     ],
   }),
