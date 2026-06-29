@@ -333,15 +333,15 @@ function About() {
 const faqs = [
   {
     q: "Quanto costa un impianto?",
-    a: "Dipende da consumi, esposizione e dimensione dell'impianto. Per questo il sopralluogo e il preventivo sono gratuiti e su misura: niente prezzi a caso.",
+    a: "Dipende da consumi, esposizione e dimensione dell'impianto. Per questo sopralluogo e preventivo sono gratuiti e su misura: niente prezzi a caso.",
   },
   {
     q: "Posso pagare a rate?",
-    a: "Concordiamo insieme la modalità di pagamento più comoda, anche dilazionata in base alle fasi di avanzamento dei lavori.",
+    a: "Sì. Concordiamo insieme la modalità più comoda, anche dilazionata in base alle fasi di avanzamento dei lavori.",
   },
   {
     q: "Quanto tempo serve per l'installazione?",
-    a: "In media circa 30 giorni dalla firma del contratto.",
+    a: "In media circa 30 giorni dalla firma del contratto, impianto chiavi in mano.",
   },
   {
     q: "Che garanzie ho?",
@@ -349,7 +349,7 @@ const faqs = [
   },
   {
     q: "Il mio tetto è adatto?",
-    a: "Lo verifichiamo gratuitamente durante il sopralluogo. La nostra squadra è specializzata in coperture, quindi sappiamo esattamente cosa valutare.",
+    a: "Lo verifichiamo gratis durante il sopralluogo. La nostra squadra è specializzata in coperture, quindi sappiamo esattamente cosa guardare.",
   },
   {
     q: "In quali zone operate?",
