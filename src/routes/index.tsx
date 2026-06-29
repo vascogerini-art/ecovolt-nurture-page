@@ -49,9 +49,9 @@ export const Route = createFileRoute("/")({
 function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-black/5 bg-white/85 backdrop-blur-md">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
-        <a href="#top" aria-label="ecovoltaica — home">
-          <Logo />
+      <div className="mx-auto flex h-14 max-w-6xl items-center justify-between gap-3 px-4 sm:h-16 sm:px-6">
+        <a href="#top" aria-label="ecovoltaica — home" className="flex shrink-0 items-center">
+          <Logo height={26} className="sm:!h-8" />
         </a>
         <WhatsAppButton size="sm" className="hidden sm:inline-flex" />
         <a
@@ -59,9 +59,9 @@ function Header() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Scrivici su WhatsApp"
-          className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[var(--brand-green)] text-white sm:hidden"
+          className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[var(--brand-green)] text-white shadow-sm shadow-[var(--brand-green)]/30 transition-transform active:scale-95 sm:hidden"
         >
-          <MessageCircle className="h-5 w-5" strokeWidth={2.2} />
+          <MessageCircle className="h-[18px] w-[18px]" strokeWidth={2.2} />
         </a>
       </div>
     </header>
