@@ -361,35 +361,47 @@ function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
   return (
     <section className="bg-white">
-      <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20">
-        <h2 className="mb-8 text-2xl font-extrabold leading-tight sm:text-3xl lg:text-4xl">
-          Domande frequenti
-        </h2>
-        <div className="divide-y divide-black/10 rounded-2xl border border-black/10 bg-white">
-          {faqs.map((f, i) => {
-            const isOpen = open === i;
-            return (
-              <div key={f.q}>
-                <button
-                  type="button"
-                  onClick={() => setOpen(isOpen ? null : i)}
-                  className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left transition-colors hover:bg-[var(--brand-surface)]"
-                  aria-expanded={isOpen}
-                >
-                  <span className="font-semibold text-[var(--brand-teal)]">{f.q}</span>
-                  <ChevronDown
-                    className={`h-5 w-5 shrink-0 text-[var(--brand-green)] transition-transform ${isOpen ? "rotate-180" : ""}`}
-                  />
-                </button>
-                {isOpen && (
-                  <div className="px-5 pb-5 text-sm leading-relaxed text-[var(--foreground)] sm:text-base">
-                    {f.a}
+      <div className="mx-auto max-w-3xl px-4 py-14 sm:px-6 sm:py-20">
+        <Reveal>
+          <h2 className="mb-6 text-2xl font-extrabold leading-tight sm:mb-8 sm:text-3xl lg:text-4xl">
+            Domande frequenti
+          </h2>
+        </Reveal>
+        <Reveal delay={80}>
+          <div className="divide-y divide-black/10 overflow-hidden rounded-2xl border border-black/10 bg-white">
+            {faqs.map((f, i) => {
+              const isOpen = open === i;
+              return (
+                <div key={f.q}>
+                  <button
+                    type="button"
+                    onClick={() => setOpen(isOpen ? null : i)}
+                    className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left transition-colors hover:bg-[var(--brand-surface)]"
+                    aria-expanded={isOpen}
+                  >
+                    <span className="font-semibold text-[var(--brand-teal)]">{f.q}</span>
+                    <ChevronDown
+                      className={`h-5 w-5 shrink-0 text-[var(--brand-green)] transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
+                    />
+                  </button>
+                  <div
+                    className="grid overflow-hidden transition-all duration-300 ease-out"
+                    style={{
+                      gridTemplateRows: isOpen ? "1fr" : "0fr",
+                      opacity: isOpen ? 1 : 0,
+                    }}
+                  >
+                    <div className="min-h-0">
+                      <div className="px-5 pb-5 text-sm leading-relaxed text-[var(--foreground)] sm:text-base">
+                        {f.a}
+                      </div>
+                    </div>
                   </div>
-                )}
-              </div>
-            );
-          })}
-        </div>
+                </div>
+              );
+            })}
+          </div>
+        </Reveal>
       </div>
     </section>
   );
@@ -398,24 +410,35 @@ function FAQ() {
 function FinalCTA() {
   return (
     <section className="relative overflow-hidden brand-gradient text-white">
-      <div className="mx-auto max-w-4xl px-4 py-16 text-center sm:px-6 sm:py-20">
-        <h2 className="text-2xl font-extrabold leading-tight text-white sm:text-3xl lg:text-4xl">
-          Vuoi capire se il fotovoltaico conviene a casa tua?
-        </h2>
-        <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-white/90 sm:text-lg">
-          Scrivici su WhatsApp: ti rispondiamo e fissiamo il sopralluogo gratuito. Nessun impegno.
-        </p>
-        <div className="mt-7 flex justify-center">
-          <a
-            href={WHATSAPP_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-7 py-4 text-base font-semibold text-[var(--brand-teal)] shadow-md transition-all hover:scale-[1.02] active:scale-[0.98] sm:text-lg"
-          >
-            <MessageCircle className="h-5 w-5 text-[var(--brand-green)]" strokeWidth={2.2} />
-            Scrivici su WhatsApp
-          </a>
-        </div>
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -top-24 -right-20 h-72 w-72 rounded-full bg-white/10 blur-3xl"
+      />
+      <div className="relative mx-auto max-w-4xl px-4 py-14 text-center sm:px-6 sm:py-20">
+        <Reveal>
+          <h2 className="text-2xl font-extrabold leading-tight text-white sm:text-3xl lg:text-4xl">
+            Il fotovoltaico conviene a casa tua?
+          </h2>
+        </Reveal>
+        <Reveal delay={80}>
+          <p className="mx-auto mt-4 max-w-xl text-[15px] leading-relaxed text-white/90 sm:text-lg">
+            Scrivici su WhatsApp: ti rispondiamo e fissiamo il sopralluogo gratuito. Nessun
+            impegno, nessun venditore.
+          </p>
+        </Reveal>
+        <Reveal delay={140}>
+          <div className="mt-7 flex justify-center">
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-7 py-4 text-base font-semibold text-[var(--brand-teal)] shadow-lg shadow-black/20 transition-all hover:scale-[1.02] active:scale-[0.98] sm:text-lg"
+            >
+              <MessageCircle className="h-5 w-5 text-[var(--brand-green)]" strokeWidth={2.2} />
+              Scrivici su WhatsApp
+            </a>
+          </div>
+        </Reveal>
       </div>
     </section>
   );
