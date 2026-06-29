@@ -254,15 +254,15 @@ function HowItWorks() {
         <h2 className="mb-10 text-2xl font-extrabold leading-tight sm:text-3xl lg:text-4xl">
           Come funziona
         </h2>
-        <div className="grid gap-6 md:grid-cols-3">
-          {steps.map((s) => (
-            <div key={s.n} className="relative rounded-2xl bg-[var(--brand-surface)] p-6">
-              <div className="font-display text-4xl font-extrabold text-brand-gradient">
-                {s.n}
+        <div className="grid gap-5 md:grid-cols-3">
+          {steps.map((s, i) => (
+            <Reveal key={s.n} delay={i * 100}>
+              <div className="relative h-full overflow-hidden rounded-2xl bg-[var(--brand-surface)] p-6 transition-transform duration-300 hover:-translate-y-1">
+                <div className="text-4xl font-extrabold text-brand-gradient">{s.n}</div>
+                <h3 className="mt-3 text-lg font-semibold">{s.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-[var(--foreground)]">{s.text}</p>
               </div>
-              <h3 className="mt-3 text-lg font-semibold">{s.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-[var(--foreground)]">{s.text}</p>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>
