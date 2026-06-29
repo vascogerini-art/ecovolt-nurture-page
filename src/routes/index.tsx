@@ -16,8 +16,9 @@ import {
 } from "lucide-react";
 import { Logo } from "@/components/Logo";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
-import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { Reveal } from "@/components/Reveal";
+import heroImage from "@/assets/hero-villa-fotovoltaico.jpg";
+import aboutImage from "@/assets/about-squadra-tetto.jpg";
 import {
   WHATSAPP_URL,
   COMPANY_LEGAL,
