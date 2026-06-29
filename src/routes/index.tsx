@@ -74,49 +74,61 @@ function Hero() {
     <section id="top" className="relative overflow-hidden bg-white">
       <div
         aria-hidden
-        className="pointer-events-none absolute -top-32 -right-32 h-96 w-96 rounded-full opacity-20 blur-3xl brand-gradient"
+        className="pointer-events-none absolute -top-32 -right-32 h-96 w-96 rounded-full opacity-25 blur-3xl brand-gradient"
       />
-      <div className="mx-auto grid max-w-6xl gap-10 px-4 pt-10 pb-14 sm:px-6 lg:grid-cols-2 lg:gap-12 lg:pt-20 lg:pb-24">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -bottom-40 -left-32 h-80 w-80 rounded-full opacity-10 blur-3xl brand-gradient"
+      />
+      <div className="mx-auto grid max-w-6xl gap-8 px-4 pt-8 pb-12 sm:px-6 sm:pt-12 lg:grid-cols-2 lg:gap-12 lg:pt-20 lg:pb-24">
         <div className="flex flex-col justify-center">
-          <div className="mb-5 inline-flex w-fit items-center gap-2 rounded-full border border-[var(--brand-green)]/20 bg-[var(--brand-green)]/8 px-3 py-1.5 text-xs font-medium text-[var(--brand-teal)]">
-            <Sun className="h-3.5 w-3.5 text-[var(--brand-green)]" />
-            Fotovoltaico residenziale · basso Lazio
-          </div>
-          <h1 className="text-3xl leading-[1.1] font-extrabold sm:text-4xl lg:text-5xl">
-            Abbatti la bolletta con il fotovoltaico.{" "}
-            <span className="text-brand-gradient">Senza ritrovarti il tetto bucato.</span>
-          </h1>
-          <p className="mt-5 max-w-xl text-base leading-relaxed text-[var(--foreground)] sm:text-lg">
-            A Frosinone, Latina e nel basso Lazio installiamo impianti fotovoltaici con una squadra
-            di specialisti delle coperture, attiva da due generazioni. Chi ti fa il preventivo è
-            chi realizza l'impianto: niente venditori che spariscono, niente infiltrazioni, niente
-            sorprese.
-          </p>
-          <div className="mt-7 flex flex-col items-start gap-3">
-            <WhatsAppButton size="lg" />
-            <ul className="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-[var(--muted-foreground)] sm:text-sm">
-              <li className="inline-flex items-center gap-1.5">
-                <CheckCircle2 className="h-4 w-4 text-[var(--brand-green)]" />
-                Sopralluogo e preventivo gratuiti
-              </li>
-              <li className="inline-flex items-center gap-1.5">
-                <ShieldCheck className="h-4 w-4 text-[var(--brand-green)]" />
-                Nessun impegno
-              </li>
-              <li className="inline-flex items-center gap-1.5">
-                <MapPin className="h-4 w-4 text-[var(--brand-green)]" />
-                Frosinone, Latina e basso Lazio
-              </li>
-            </ul>
-          </div>
+          <Reveal>
+            <div className="mb-4 inline-flex w-fit items-center gap-2 rounded-full border border-[var(--brand-green)]/25 bg-[var(--brand-green)]/8 px-3 py-1.5 text-[11px] font-medium text-[var(--brand-teal)] sm:text-xs">
+              <Sun className="h-3.5 w-3.5 text-[var(--brand-green)]" />
+              Fotovoltaico residenziale · basso Lazio
+            </div>
+          </Reveal>
+          <Reveal delay={80}>
+            <h1 className="text-[28px] leading-[1.1] font-extrabold sm:text-4xl lg:text-5xl">
+              Abbatti la bolletta con il fotovoltaico.{" "}
+              <span className="text-brand-gradient">Senza ritrovarti il tetto bucato.</span>
+            </h1>
+          </Reveal>
+          <Reveal delay={160}>
+            <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-[var(--foreground)] sm:mt-5 sm:text-lg">
+              A Frosinone, Latina e nel basso Lazio installiamo impianti fotovoltaici con una
+              squadra di specialisti delle coperture, attiva da due generazioni. Chi ti fa il
+              preventivo è chi realizza l'impianto: niente venditori che spariscono, niente
+              infiltrazioni, niente sorprese.
+            </p>
+          </Reveal>
+          <Reveal delay={240}>
+            <div className="mt-6 flex flex-col items-start gap-3 sm:mt-7">
+              <WhatsAppButton size="lg" className="w-full sm:w-auto" />
+              <ul className="flex flex-wrap items-center gap-x-4 gap-y-2 text-[11px] text-[var(--muted-foreground)] sm:text-sm">
+                <li className="inline-flex items-center gap-1.5">
+                  <CheckCircle2 className="h-4 w-4 text-[var(--brand-green)]" />
+                  Sopralluogo e preventivo gratuiti
+                </li>
+                <li className="inline-flex items-center gap-1.5">
+                  <ShieldCheck className="h-4 w-4 text-[var(--brand-green)]" />
+                  Nessun impegno
+                </li>
+                <li className="inline-flex items-center gap-1.5">
+                  <MapPin className="h-4 w-4 text-[var(--brand-green)]" />
+                  Frosinone, Latina e basso Lazio
+                </li>
+              </ul>
+            </div>
+          </Reveal>
         </div>
-        <div className="relative">
+        <Reveal delay={200} className="relative">
           <ImagePlaceholder
-            aspect="aspect-[4/5] sm:aspect-[4/3] lg:aspect-[5/6]"
+            aspect="aspect-[4/3] lg:aspect-[5/6]"
             className="w-full shadow-xl shadow-black/10"
             label="[Foto pannelli su villetta]"
           />
-        </div>
+        </Reveal>
       </div>
     </section>
   );
