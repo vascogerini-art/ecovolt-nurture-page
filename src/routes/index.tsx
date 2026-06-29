@@ -54,7 +54,9 @@ function Header() {
         <a href="#top" aria-label="ecovoltaica — home" className="flex shrink-0 items-center">
           <Logo height={28} />
         </a>
-        <WhatsAppButton size="sm" className="hidden sm:inline-flex" />
+        <div className="hidden sm:block">
+          <WhatsAppButton size="sm" />
+        </div>
         <a
           href={WHATSAPP_URL}
           target="_blank"
