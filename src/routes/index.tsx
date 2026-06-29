@@ -198,42 +198,47 @@ const reasons = [
   {
     icon: Handshake,
     title: "Chi vende è chi installa",
-    text: "Niente venditori a provvigione che promettono mari e monti. Il preventivo te lo fa direttamente chi realizza l'impianto e ci mette la faccia.",
+    text: "Niente venditori a provvigione: il preventivo te lo fa direttamente chi sale sul tetto a montarlo.",
   },
   {
     icon: HardHat,
-    title: "Specialisti delle coperture, non elettricisti",
-    text: "Sul tuo tetto sale una squadra di muratori specializzati in coperture da due generazioni. Quando scendono, il tetto è a posto: nessuna infiltrazione.",
+    title: "Specialisti del tetto, non solo dei pannelli",
+    text: "Sulla tua copertura sale una squadra di muratori specializzati da due generazioni. Quando scendono, il tetto è a posto.",
   },
   {
     icon: Scale,
     title: "Consulenza onesta",
-    text: "Se la batteria non ti serve, te lo diciamo. Preferiamo farti risparmiare che venderti il superfluo.",
+    text: "Se la batteria non ti serve, te lo diciamo. Meglio farti risparmiare che venderti il superfluo.",
   },
   {
     icon: Award,
-    title: "Pannelli garantiti fino a 30 anni",
-    text: "Componenti di qualità con garanzia del produttore fino a 25-30 anni sui pannelli e fino a 10 anni su inverter e accumulo.",
+    title: "Garanzie fino a 30 anni",
+    text: "Componenti di qualità: garanzia produttore fino a 25-30 anni sui pannelli, fino a 10 sugli inverter e l'accumulo.",
   },
   {
     icon: CalendarCheck,
-    title: "Impianto attivo in circa 30 giorni",
-    text: "Dalla firma del contratto all'impianto in funzione, in media in un mese.",
+    title: "Attivo in circa 30 giorni",
+    text: "Dalla firma all'impianto in funzione, in media un mese.",
   },
 ];
 
 function WhyUs() {
   return (
     <section className="bg-[var(--brand-surface)]">
-      <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
-        <div className="mb-10 max-w-2xl">
-          <h2 className="text-2xl font-extrabold leading-tight sm:text-3xl lg:text-4xl">
-            Perché sceglierci
-          </h2>
-        </div>
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-20">
+        <Reveal>
+          <div className="mb-8 max-w-2xl sm:mb-10">
+            <h2 className="text-2xl font-extrabold leading-tight sm:text-3xl lg:text-4xl">
+              Perché sceglierci
+            </h2>
+            <p className="mt-3 text-[15px] text-[var(--muted-foreground)] sm:text-base">
+              Quello che ci differenzia da chi si è improvvisato dopo il Superbonus.
+            </p>
+          </div>
+        </Reveal>
+        <div className="grid gap-4 sm:gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {reasons.map(({ icon: Icon, title, text }, i) => (
-            <Reveal as="article" key={title} delay={i * 80}>
+            <Reveal as="article" key={title} delay={i * 70}>
               <div className="flex h-full flex-col rounded-2xl border border-black/5 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-[var(--brand-green)]/10">
                 <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-[var(--brand-green)]/10 text-[var(--brand-green)] transition-transform duration-300 hover:scale-110">
                   <Icon className="h-5 w-5" strokeWidth={2.2} />
