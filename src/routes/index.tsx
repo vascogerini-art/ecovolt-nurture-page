@@ -252,17 +252,17 @@ function WhyUs() {
 const steps = [
   {
     n: "01",
-    title: "Ci contatti",
-    text: "Ci scrivi su WhatsApp o aspetti la nostra chiamata. Fissiamo un appuntamento comodo.",
+    title: "Ci scrivi",
+    text: "Un messaggio su WhatsApp e fissiamo insieme un appuntamento. Tempi tuoi.",
   },
   {
     n: "02",
     title: "Sopralluogo gratuito",
-    text: "Veniamo a casa tua, analizziamo tutto e ti facciamo un preventivo chiaro, su misura e senza impegno.",
+    text: "Veniamo a casa tua, analizziamo tetto e consumi e ti consegniamo un preventivo chiaro, su misura, senza impegno.",
   },
   {
     n: "03",
-    title: "Installazione a regola d'arte",
+    title: "Installazione",
     text: "Realizziamo l'impianto con la nostra squadra. E restiamo disponibili anche dopo, per assistenza e supporto.",
   },
 ];
@@ -270,13 +270,15 @@ const steps = [
 function HowItWorks() {
   return (
     <section className="bg-white">
-      <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
-        <h2 className="mb-10 text-2xl font-extrabold leading-tight sm:text-3xl lg:text-4xl">
-          Come funziona
-        </h2>
-        <div className="grid gap-5 md:grid-cols-3">
+      <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-20">
+        <Reveal>
+          <h2 className="mb-8 text-2xl font-extrabold leading-tight sm:mb-10 sm:text-3xl lg:text-4xl">
+            Come funziona
+          </h2>
+        </Reveal>
+        <div className="grid gap-4 sm:gap-5 md:grid-cols-3">
           {steps.map((s, i) => (
-            <Reveal key={s.n} delay={i * 100}>
+            <Reveal key={s.n} delay={i * 80}>
               <div className="relative h-full overflow-hidden rounded-2xl bg-[var(--brand-surface)] p-6 transition-transform duration-300 hover:-translate-y-1">
                 <div className="text-4xl font-extrabold text-brand-gradient">{s.n}</div>
                 <h3 className="mt-3 text-lg font-semibold">{s.title}</h3>
@@ -293,26 +295,31 @@ function HowItWorks() {
 function About() {
   return (
     <section className="bg-[var(--brand-teal)] text-white">
-      <div className="mx-auto grid max-w-6xl gap-10 px-4 py-16 sm:px-6 sm:py-20 lg:grid-cols-5 lg:gap-12">
-        <div className="lg:col-span-3">
+      <div className="mx-auto grid max-w-6xl gap-8 px-4 py-14 sm:px-6 sm:py-20 lg:grid-cols-5 lg:gap-12">
+        <Reveal className="lg:col-span-3">
           <h2 className="text-2xl font-extrabold leading-tight text-white sm:text-3xl lg:text-4xl">
             Chi siamo
           </h2>
-          <p className="mt-5 text-base leading-relaxed text-white/85 sm:text-lg">
-            Siamo ecovoltaica, un'azienda del basso Lazio. Veniamo dall'edilizia: realizziamo
-            coperture e strutture in cemento armato da due generazioni. Per questo, quando
-            installiamo un impianto fotovoltaico, lo facciamo come si deve — perché un tetto,
-            prima di tutto, deve restare un tetto. Niente sub-appalti improvvisati: chi viene a
-            casa tua è chi lavora per la nostra azienda.
+          <p className="mt-5 text-[15px] leading-relaxed text-white/85 sm:text-lg">
+            ecovoltaica nasce nel basso Lazio dall'esperienza di un'impresa edile attiva da due
+            generazioni: coperture e strutture in cemento armato sono il nostro mestiere. Per
+            questo, quando installiamo un fotovoltaico, lo facciamo come va fatto — perché un
+            tetto, prima di tutto, deve restare un tetto. Niente sub-appalti: chi viene a casa
+            tua lavora per noi.
           </p>
-        </div>
-        <div className="lg:col-span-2">
-          <ImagePlaceholder
-            aspect="aspect-square"
-            className="w-full"
-            label="[Foto titolare / squadra]"
-          />
-        </div>
+        </Reveal>
+        <Reveal delay={120} className="lg:col-span-2">
+          <div className="relative overflow-hidden rounded-2xl shadow-xl shadow-black/30 ring-1 ring-white/10">
+            <img
+              src={aboutImage}
+              alt="Squadra ecovoltaica al lavoro sull'installazione di pannelli su tetto in tegole"
+              width={1024}
+              height={1024}
+              loading="lazy"
+              className="aspect-square w-full object-cover"
+            />
+          </div>
+        </Reveal>
       </div>
     </section>
   );
