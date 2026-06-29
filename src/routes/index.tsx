@@ -212,17 +212,16 @@ function WhyUs() {
           </h2>
         </div>
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {reasons.map(({ icon: Icon, title, text }) => (
-            <article
-              key={title}
-              className="flex flex-col rounded-2xl border border-black/5 bg-white p-6 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md"
-            >
-              <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-[var(--brand-green)]/10 text-[var(--brand-green)]">
-                <Icon className="h-5 w-5" strokeWidth={2.2} />
+          {reasons.map(({ icon: Icon, title, text }, i) => (
+            <Reveal as="article" key={title} delay={i * 80}>
+              <div className="flex h-full flex-col rounded-2xl border border-black/5 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-[var(--brand-green)]/10">
+                <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-[var(--brand-green)]/10 text-[var(--brand-green)] transition-transform duration-300 hover:scale-110">
+                  <Icon className="h-5 w-5" strokeWidth={2.2} />
+                </div>
+                <h3 className="text-lg font-semibold leading-snug">{title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-[var(--foreground)]">{text}</p>
               </div>
-              <h3 className="text-lg font-semibold leading-snug">{title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-[var(--foreground)]">{text}</p>
-            </article>
+            </Reveal>
           ))}
         </div>
       </div>
