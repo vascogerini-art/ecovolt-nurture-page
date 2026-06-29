@@ -1,20 +1,13 @@
-import { Leaf, Zap } from "lucide-react";
+import logoSrc from "@/assets/logo-ecovoltaica.png";
 
-export function Logo({ className = "" }: { className?: string }) {
+export function Logo({ className = "", height = 32 }: { className?: string; height?: number }) {
   return (
-    <div className={`flex items-center gap-2 ${className}`}>
-      <div className="relative flex h-9 w-9 items-center justify-center rounded-xl brand-gradient text-white">
-        <Leaf className="h-5 w-5" strokeWidth={2.4} />
-        <Zap
-          className="absolute h-3.5 w-3.5 text-white"
-          strokeWidth={2.8}
-          fill="white"
-          style={{ top: 6, right: 5 }}
-        />
-      </div>
-      <span className="text-lg font-bold lowercase tracking-tight text-[var(--brand-teal)]">
-        ecovoltaica
-      </span>
-    </div>
+    <img
+      src={logoSrc}
+      alt="ecovoltaica"
+      style={{ height }}
+      className={`w-auto select-none ${className}`}
+      draggable={false}
+    />
   );
 }
