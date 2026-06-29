@@ -12,7 +12,7 @@ export function Logo({ className = "" }: { className?: string }) {
           style={{ top: 6, right: 5 }}
         />
       </div>
-      <span className="font-display text-lg font-700 lowercase tracking-tight text-[var(--brand-teal)]">
+      <span className="text-lg font-bold lowercase tracking-tight text-[var(--brand-teal)]">
         ecovoltaica
       </span>
     </div>
