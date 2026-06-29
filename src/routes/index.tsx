@@ -149,19 +149,23 @@ function Hero() {
 function Problem() {
   return (
     <section className="bg-[var(--brand-surface)]">
-      <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20">
-        <h2 className="text-2xl font-extrabold leading-tight sm:text-3xl lg:text-4xl">
-          Mettere il fotovoltaico è una buona idea.{" "}
-          <span className="text-[var(--brand-green)]">
-            Affidarlo alle persone sbagliate è un incubo.
-          </span>
-        </h2>
-        <p className="mt-5 text-base leading-relaxed text-[var(--foreground)] sm:text-lg">
-          Dopo il Superbonus si sono improvvisati "installatori" ovunque. Risultato? Tetti forati
-          alla buona, infiltrazioni alle prime piogge, impianti che rendono meno del previsto e
-          venditori spariti dopo la firma. Il pannello lo sanno montare in tanti. Pochissimi sanno
-          mettere le mani su un tetto senza combinare guai.
-        </p>
+      <div className="mx-auto max-w-4xl px-4 py-14 sm:px-6 sm:py-20">
+        <Reveal>
+          <h2 className="text-2xl font-extrabold leading-tight sm:text-3xl lg:text-4xl">
+            Il fotovoltaico è una buona idea.{" "}
+            <span className="text-[var(--brand-green)]">
+              Affidarlo alle persone sbagliate è un incubo.
+            </span>
+          </h2>
+        </Reveal>
+        <Reveal delay={80}>
+          <p className="mt-5 text-[15px] leading-relaxed text-[var(--foreground)] sm:text-lg">
+            Dopo il Superbonus sono spuntati "installatori" ovunque. Risultato: tetti forati alla
+            buona, infiltrazioni alle prime piogge, impianti che rendono la metà di quanto
+            promesso e venditori spariti subito dopo la firma. Montare un pannello lo sanno fare
+            in tanti. Pochi sanno mettere le mani su un tetto senza combinare guai.
+          </p>
+        </Reveal>
       </div>
     </section>
   );
@@ -170,17 +174,21 @@ function Problem() {
 function Approach() {
   return (
     <section className="bg-white">
-      <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20">
-        <h2 className="text-2xl font-extrabold leading-tight sm:text-3xl lg:text-4xl">
-          Noi partiamo dal tetto.{" "}
-          <span className="text-brand-gradient">Poi pensiamo all'impianto.</span>
-        </h2>
-        <p className="mt-5 text-base leading-relaxed text-[var(--foreground)] sm:text-lg">
-          Veniamo a casa tua gratuitamente, valutiamo consumi, esposizione e copertura, e ti
-          diciamo la verità: quanti pannelli ti servono davvero, se ti conviene la batteria oppure
-          no, e quanto puoi realisticamente risparmiare. Senza pacchetti gonfiati, senza
-          forzature. Se qualcosa non ti conviene, te lo diciamo.
-        </p>
+      <div className="mx-auto max-w-4xl px-4 py-14 sm:px-6 sm:py-20">
+        <Reveal>
+          <h2 className="text-2xl font-extrabold leading-tight sm:text-3xl lg:text-4xl">
+            Noi partiamo dal tetto.{" "}
+            <span className="text-brand-gradient">Poi pensiamo all'impianto.</span>
+          </h2>
+        </Reveal>
+        <Reveal delay={80}>
+          <p className="mt-5 text-[15px] leading-relaxed text-[var(--foreground)] sm:text-lg">
+            Veniamo a casa tua gratis. Misuriamo consumi, esposizione e copertura, e ti diciamo le
+            cose come stanno: quanti pannelli ti servono davvero, se la batteria ha senso o no,
+            quanto puoi risparmiare realmente. Senza pacchetti gonfiati, senza forzature. Se
+            qualcosa non ti conviene, te lo diciamo prima noi.
+          </p>
+        </Reveal>
       </div>
     </section>
   );
