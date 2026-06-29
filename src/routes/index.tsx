@@ -17,6 +17,7 @@ import {
 import { Logo } from "@/components/Logo";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
+import { Reveal } from "@/components/Reveal";
 import {
   WHATSAPP_URL,
   COMPANY_LEGAL,
