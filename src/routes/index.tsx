@@ -92,26 +92,26 @@ function Hero() {
             </div>
           </Reveal>
           <Reveal delay={80}>
-            <h1 className="text-[28px] leading-[1.1] font-extrabold sm:text-4xl lg:text-5xl">
-              Abbatti la bolletta con il fotovoltaico.{" "}
-              <span className="text-brand-gradient">Senza ritrovarti il tetto bucato.</span>
+            <h1 className="text-[28px] leading-[1.05] font-extrabold sm:text-4xl lg:text-[52px] lg:leading-[1.05]">
+              Bolletta più bassa.{" "}
+              <span className="text-brand-gradient">Tetto integro.</span>
             </h1>
           </Reveal>
-          <Reveal delay={160}>
+          <Reveal delay={140}>
             <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-[var(--foreground)] sm:mt-5 sm:text-lg">
-              A Frosinone, Latina e nel basso Lazio installiamo impianti fotovoltaici con una
-              squadra di specialisti delle coperture, attiva da due generazioni. Chi ti fa il
-              preventivo è chi realizza l'impianto: niente venditori che spariscono, niente
-              infiltrazioni, niente sorprese.
+              Installiamo impianti fotovoltaici a Frosinone, Latina e nel basso Lazio. Veniamo
+              dall'edilizia: due generazioni di esperienza sui tetti. Chi ti fa il preventivo è
+              chi sale a montarlo — niente venditori in giacca, niente infiltrazioni, niente
+              sorprese alla prima pioggia.
             </p>
           </Reveal>
-          <Reveal delay={240}>
+          <Reveal delay={200}>
             <div className="mt-6 flex flex-col items-start gap-3 sm:mt-7">
               <WhatsAppButton size="lg" className="w-full sm:w-auto" />
               <ul className="flex flex-wrap items-center gap-x-4 gap-y-2 text-[11px] text-[var(--muted-foreground)] sm:text-sm">
                 <li className="inline-flex items-center gap-1.5">
                   <CheckCircle2 className="h-4 w-4 text-[var(--brand-green)]" />
-                  Sopralluogo e preventivo gratuiti
+                  Sopralluogo gratuito
                 </li>
                 <li className="inline-flex items-center gap-1.5">
                   <ShieldCheck className="h-4 w-4 text-[var(--brand-green)]" />
@@ -119,18 +119,27 @@ function Hero() {
                 </li>
                 <li className="inline-flex items-center gap-1.5">
                   <MapPin className="h-4 w-4 text-[var(--brand-green)]" />
-                  Frosinone, Latina e basso Lazio
+                  Frosinone · Latina · basso Lazio
                 </li>
               </ul>
             </div>
           </Reveal>
         </div>
-        <Reveal delay={200} className="relative">
-          <ImagePlaceholder
-            aspect="aspect-[4/3] lg:aspect-[5/6]"
-            className="w-full shadow-xl shadow-black/10"
-            label="[Foto pannelli su villetta]"
-          />
+        <Reveal delay={120} className="relative">
+          <div className="relative overflow-hidden rounded-2xl shadow-xl shadow-black/15 ring-1 ring-black/5">
+            <img
+              src={heroImage}
+              alt="Villa con impianto fotovoltaico installato su tetto in tegole nel basso Lazio"
+              width={1280}
+              height={1024}
+              className="aspect-[4/3] w-full object-cover lg:aspect-[5/6]"
+              fetchPriority="high"
+            />
+            <div
+              aria-hidden
+              className="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-inset ring-white/10"
+            />
+          </div>
         </Reveal>
       </div>
     </section>
