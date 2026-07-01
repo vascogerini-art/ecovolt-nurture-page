@@ -65,7 +65,7 @@ function Header() {
           aria-label="Scrivici su WhatsApp"
           className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[var(--brand-green)] text-white shadow-sm shadow-[var(--brand-green)]/30 transition-transform active:scale-95 sm:hidden"
         >
-          <MessageCircle className="h-[18px] w-[18px]" strokeWidth={2.2} />
+          <WhatsAppIcon className="h-[20px] w-[20px]" />
         </a>
       </div>
     </header>
@@ -434,7 +434,7 @@ function FinalCTA() {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-7 py-4 text-base font-semibold text-[var(--brand-teal)] shadow-lg shadow-black/20 transition-all hover:scale-[1.02] active:scale-[0.98] sm:text-lg"
             >
-              <MessageCircle className="h-5 w-5 text-[var(--brand-green)]" strokeWidth={2.2} />
+              <WhatsAppIcon className="h-5 w-5" />
               Scrivici su WhatsApp
             </a>
           </div>
@@ -464,7 +464,7 @@ function Footer() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-[var(--brand-teal)] hover:text-[var(--brand-green)]"
             >
-              <MessageCircle className="h-4 w-4" /> WhatsApp
+              <WhatsAppIcon className="h-4 w-4" /> WhatsApp
             </a>
             <br />
             <a
