@@ -65,7 +65,7 @@ function Header() {
           aria-label="Scrivici su WhatsApp"
           className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[var(--brand-green)] text-white shadow-sm shadow-[var(--brand-green)]/30 transition-transform active:scale-95 sm:hidden"
         >
-          <WhatsAppIcon variant="mono" className="h-[20px] w-[20px] text-white" />
+          <WhatsAppIcon className="h-[20px] w-[20px]" />
         </a>
       </div>
     </header>
