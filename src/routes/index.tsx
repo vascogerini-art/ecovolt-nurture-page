@@ -12,7 +12,9 @@ import {
   ChevronDown,
   Sun,
   Mail,
-  MessageCircle,
+} from "lucide-react";
+import { WhatsAppIcon } from "@/components/WhatsAppIcon";
+import { MessageCircle } from "lucide-react";
 } from "lucide-react";
 import { Logo } from "@/components/Logo";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
