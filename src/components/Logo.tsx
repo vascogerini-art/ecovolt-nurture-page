@@ -1,4 +1,4 @@
-import logoSrc from "@/assets/logo-ecovoltaica.png";
+import logoSrc from "@/assets/logo_ecovoltaica_web.svg";
 
 export function Logo({ className = "", height = 32 }: { className?: string; height?: number }) {
   return (

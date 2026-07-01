@@ -12,6 +12,8 @@ import {
   ChevronDown,
   Sun,
   Mail,
+  CircuitBoard,
+  Zap,
 } from "lucide-react";
 import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 import { Logo } from "@/components/Logo";
@@ -33,7 +35,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Impianti fotovoltaici residenziali a Frosinone, Latina e nel basso Lazio. Specialisti delle coperture da due generazioni: niente infiltrazioni, niente sorprese.",
+          "Impianti fotovoltaici residenziali a Frosinone, Latina e nel basso Lazio. Lavoriamo con specialisti delle coperture da due generazioni: niente infiltrazioni, niente sorprese.",
       },
       { property: "og:title", content: "ecovoltaica — Fotovoltaico nel basso Lazio" },
       {
@@ -51,9 +53,9 @@ export const Route = createFileRoute("/")({
 function Header() {
   return (
     <header className="sticky top-0 z-40 bg-white/90 backdrop-blur-md">
-      <div className="mx-auto flex h-14 max-w-6xl items-center justify-between gap-3 px-4 sm:h-16 sm:px-6">
+      <div className="mx-auto flex h-24 max-w-6xl items-center justify-between gap-3 px-4 sm:h-28 sm:px-6">
         <a href="#top" aria-label="ecovoltaica — home" className="flex shrink-0 items-center">
-          <Logo height={28} />
+          <Logo height={80} />
         </a>
         <div className="hidden sm:block">
           <WhatsAppButton size="sm" />
@@ -99,10 +101,11 @@ function Hero() {
           </Reveal>
           <Reveal delay={140}>
             <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-[var(--foreground)] sm:mt-5 sm:text-lg">
-              Installiamo impianti fotovoltaici a Frosinone, Latina e nel basso Lazio. Veniamo
-              dall'edilizia: due generazioni di esperienza sui tetti. Chi ti fa il preventivo è
-              chi sale a montarlo — niente venditori in giacca, niente infiltrazioni, niente
-              sorprese alla prima pioggia.
+              Installiamo impianti fotovoltaici a Frosinone, Latina e Roma Sud.
+              <br></br>
+              Elettrotecnici da due generazioni: gli impianti li conosciamo e li installiamo davvero. 
+              <br></br>Per la posa sul tetto lavoriamo con specialisti delle coperture, 
+              perché il fotovoltaico deve produrre energia, non problemi.
             </p>
           </Reveal>
           <Reveal delay={200}>
@@ -160,10 +163,10 @@ function Problem() {
         </Reveal>
         <Reveal delay={80}>
           <p className="mt-5 text-[15px] leading-relaxed text-[var(--foreground)] sm:text-lg">
-            Dopo il Superbonus sono spuntati "installatori" ovunque. Risultato: tetti forati alla
-            buona, infiltrazioni alle prime piogge, impianti che rendono la metà di quanto
-            promesso e venditori spariti subito dopo la firma. Montare un pannello lo sanno fare
-            in tanti. Pochi sanno mettere le mani su un tetto senza combinare guai.
+            Un impianto fotovoltaico non deve solo accendersi. Deve lavorare bene.<br></br>
+            Dopo il Superbonus abbiamo visto batterie ferme, inverter configurati male, impianti montati in fretta 
+            e clienti lasciati senza risposte.<br></br>
+            Per questo lavoriamo da tecnici, non da venditori: dimensioniamo, installiamo, configuriamo e controlliamo ogni impianto perché produca davvero, in modo affidabile, giorno dopo giorno.
           </p>
         </Reveal>
       </div>
@@ -177,15 +180,15 @@ function Approach() {
       <div className="mx-auto max-w-4xl px-4 py-14 sm:px-6 sm:py-20">
         <Reveal>
           <h2 className="text-2xl font-extrabold leading-tight sm:text-3xl lg:text-4xl">
-            Noi partiamo dal tetto.{" "}
-            <span className="text-brand-gradient">Poi pensiamo all'impianto.</span>
+            Partiamo dalle tue esigenze.{" "}
+            <span className="text-brand-gradient">Poi progettiamo l’impianto giusto.</span>
           </h2>
         </Reveal>
         <Reveal delay={80}>
           <p className="mt-5 text-[15px] leading-relaxed text-[var(--foreground)] sm:text-lg">
-            Veniamo a casa tua gratis. Misuriamo consumi, esposizione e copertura, e ti diciamo le
+            Veniamo a casa tua gratis. Valutiamo consumi, esposizione e copertura, e ti diciamo le
             cose come stanno: quanti pannelli ti servono davvero, se la batteria ha senso o no,
-            quanto puoi risparmiare realmente. Senza pacchetti gonfiati, senza forzature. Se
+            quanto puoi risparmiare realisticamente. Senza pacchetti gonfiati, senza forzature. Se
             qualcosa non ti conviene, te lo diciamo prima noi.
           </p>
         </Reveal>
@@ -197,28 +200,33 @@ function Approach() {
 const reasons = [
   {
     icon: Handshake,
-    title: "Chi vende è chi installa",
-    text: "Niente venditori a provvigione: il preventivo te lo fa direttamente chi sale sul tetto a montarlo.",
+    title: "Parli con chi realizza",
+    text: "Niente venditori a provvigione: il preventivo lo prepara chi conosce davvero impianti, inverter, accumuli.",
+  },
+  {
+    icon: Zap,
+    title: "Tecnici per cultura",
+    text: "Siamo cresciuti tra apparecchiature elettriche, elettronica e problemi da risolvere: prima di vendere impianti, abbiamo imparato a capirli.",
   },
   {
     icon: HardHat,
-    title: "Specialisti del tetto, non solo dei pannelli",
-    text: "Sulla tua copertura sale una squadra di muratori specializzati da due generazioni. Quando scendono, il tetto è a posto.",
+    title: "Installazione pulita",
+    text: "Lavoriamo con metodo, ordine e attenzione ai dettagli: posa, collegamenti, configurazione e verifica finale fanno parte dello stesso lavoro.",
   },
   {
     icon: Scale,
-    title: "Consulenza onesta",
-    text: "Se la batteria non ti serve, te lo diciamo. Meglio farti risparmiare che venderti il superfluo.",
+    title: "Impianto su misura",
+    text: "Partiamo da consumi, abitudini e spazio disponibile. Se la batteria non serve, te lo diciamo: meglio un impianto giusto che un preventivo gonfiato.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Tetto protetto",
+    text: "Per la posa dei pannelli su copertura ci affidiamo a specialisti dell’edilizia e delle coperture, così l’impianto produce senza creare problemi alla casa.",
   },
   {
     icon: Award,
-    title: "Garanzie fino a 30 anni",
-    text: "Componenti di qualità: garanzia produttore fino a 25-30 anni sui pannelli, fino a 10 sugli inverter e l'accumulo.",
-  },
-  {
-    icon: CalendarCheck,
-    title: "Attivo in circa 30 giorni",
-    text: "Dalla firma all'impianto in funzione, in media un mese.",
+    title: "Esperienza reale sul campo",
+    text: "Abbiamo rimesso in funzione impianti nati male, batterie ferme e inverter configurati male. Sappiamo dove nascono i problemi e come evitarli.",
   },
 ];
 
@@ -232,7 +240,7 @@ function WhyUs() {
               Perché sceglierci
             </h2>
             <p className="mt-3 text-[15px] text-[var(--muted-foreground)] sm:text-base">
-              Quello che ci differenzia da chi si è improvvisato dopo il Superbonus.
+              Competenza tecnica, installazione curata, impianti su misura e attenzione anche dopo la consegna.
             </p>
           </div>
         </Reveal>
@@ -258,17 +266,17 @@ const steps = [
   {
     n: "01",
     title: "Ci scrivi",
-    text: "Un messaggio su WhatsApp e fissiamo insieme un appuntamento. Tempi tuoi.",
+    text: "Un messaggio su WhatsApp e fissiamo un primo contatto. Ci racconti consumi, esigenze e cosa vuoi ottenere dall’impianto.",
   },
   {
     n: "02",
     title: "Sopralluogo gratuito",
-    text: "Veniamo a casa tua, analizziamo tetto e consumi e ti consegniamo un preventivo chiaro, su misura, senza impegno.",
+    text: "Verifichiamo consumi, esposizione, spazio disponibile e condizioni di installazione. Poi prepariamo una proposta chiara e su misura.",
   },
   {
     n: "03",
     title: "Installazione",
-    text: "Realizziamo l'impianto con la nostra squadra. E restiamo disponibili anche dopo, per assistenza e supporto.",
+    text: "Installiamo l’impianto, configuriamo inverter e accumulo, controlliamo il funzionamento e restiamo disponibili anche dopo la consegna.",
   },
 ];
 
@@ -306,11 +314,12 @@ function About() {
             Chi siamo
           </h2>
           <p className="mt-5 text-[15px] leading-relaxed text-white/85 sm:text-lg">
-            ecovoltaica nasce nel basso Lazio dall'esperienza di un'impresa edile attiva da due
-            generazioni: coperture e strutture in cemento armato sono il nostro mestiere. Per
-            questo, quando installiamo un fotovoltaico, lo facciamo come va fatto — perché un
-            tetto, prima di tutto, deve restare un tetto. Niente sub-appalti: chi viene a casa
-            tua lavora per noi.
+            ecovoltaica è il ramo fotovoltaico di Monkey S.r.l., società attiva dal 2015, nato per offrire impianti seri, 
+            spiegati chiaramente e seguiti nel tempo.<br></br>
+            Dietro ci sono persone cresciute tra elettricità, elettronica, edilizia e lavoro sul campo. 
+            Non vendiamo soluzioni a pacchetto: ascoltiamo il cliente, progettiamo l’impianto giusto e 
+            restiamo presenti anche dopo l’installazione.
+            <br></br>Il nostro obiettivo è semplice: ottenere clienti soddisfatti, impianti che lavorano bene e rapporti che durano.
           </p>
         </Reveal>
         <Reveal delay={120} className="lg:col-span-2">
@@ -332,28 +341,32 @@ function About() {
 
 const faqs = [
   {
-    q: "Quanto costa un impianto?",
-    a: "Dipende da consumi, esposizione e dimensione dell'impianto. Per questo sopralluogo e preventivo sono gratuiti e su misura: niente prezzi a caso.",
+    q: "Quanto costa un impianto fotovoltaico?",
+    a: "Dipende da consumi, potenza necessaria, esposizione, tipo di tetto e presenza o meno dell’accumulo. Per questo sopralluogo e preventivo sono gratuiti e su misura: niente prezzi buttati lì, niente pacchetti standard.",
+  },
+  {
+    q: "La batteria conviene sempre?",
+    a: "No. Dipende da quanto consumi, da quando consumi energia e da quanto vuoi renderti indipendente dalla rete. Se l’accumulo ha senso, te lo proponiamo; se serve solo a gonfiare il preventivo, te lo diciamo chiaramente.",
   },
   {
     q: "Posso pagare a rate?",
-    a: "Sì. Concordiamo insieme la modalità più comoda, anche dilazionata in base alle fasi di avanzamento dei lavori.",
+    a: "Sì. Possiamo valutare insieme una soluzione comoda, anche con pagamenti dilazionati in base alle fasi del lavoro o tramite eventuali formule di finanziamento disponibili.",
   },
   {
-    q: "Quanto tempo serve per l'installazione?",
-    a: "In media circa 30 giorni dalla firma del contratto, impianto chiavi in mano.",
+  q: "In quanto tempo sarà pronto il mio impianto?",
+  a: "In genere completiamo l'impianto in circa 30 giorni. Durante il sopralluogo ti indichiamo una tempistica realistica in base al tipo di installazione e alle eventuali pratiche necessarie.",
   },
   {
     q: "Che garanzie ho?",
-    a: "Pannelli con garanzia del produttore fino a 25-30 anni; inverter e accumulo fino a 10 anni.",
+    a: "Dipende dai componenti scelti. In genere i pannelli hanno garanzie produttore fino a 25-30 anni, gli inverter circa 5 anni e gli accumuli fino a 10 anni. Ti indichiamo sempre le garanzie specifiche nel preventivo.",
   },
   {
     q: "Il mio tetto è adatto?",
-    a: "Lo verifichiamo gratis durante il sopralluogo. La nostra squadra è specializzata in coperture, quindi sappiamo esattamente cosa guardare.",
+    a: "Lo verifichiamo durante il sopralluogo: esposizione, spazio disponibile, ombre, orientamento e condizioni della copertura. Per la posa dei pannelli su tetto collaboriamo con specialisti delle coperture.",
   },
   {
     q: "In quali zone operate?",
-    a: "Frosinone, Latina e tutto il basso Lazio, fino alle aree a sud di Roma.",
+    a: "Installiamo impianti fotovoltaici a Frosinone, Latina, Roma Sud e nelle zone limitrofe. Se sei fuori area, contattaci comunque: valutiamo caso per caso.",
   },
 ];
 
@@ -422,8 +435,7 @@ function FinalCTA() {
         </Reveal>
         <Reveal delay={80}>
           <p className="mx-auto mt-4 max-w-xl text-[15px] leading-relaxed text-white/90 sm:text-lg">
-            Scrivici su WhatsApp: ti rispondiamo e fissiamo il sopralluogo gratuito. Nessun
-            impegno, nessun venditore.
+            Scrivici su WhatsApp: ti rispondiamo, valutiamo il tuo caso e ti diciamo se il fotovoltaico ha senso per casa tua.
           </p>
         </Reveal>
         <Reveal delay={140}>
@@ -450,11 +462,11 @@ function Footer() {
       <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
           <div>
-            <Logo />
+            <Logo height= {40} />
             <p className="mt-3 max-w-md text-sm leading-relaxed text-[var(--foreground)]">
-              {COMPANY_LEGAL} · P.IVA {COMPANY_VAT}
+             {COMPANY_LEGAL} · P.IVA {COMPANY_VAT}
               <br />
-              Frosinone, Latina e basso Lazio
+              Impianti fotovoltaici a Frosinone, Latina e Roma Sud
             </p>
           </div>
           <div className="space-y-2 text-sm">
