@@ -12,7 +12,6 @@ import {
   ChevronDown,
   Sun,
   Mail,
-  Mail,
 } from "lucide-react";
 import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 import { Logo } from "@/components/Logo";
